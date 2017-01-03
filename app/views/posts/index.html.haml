@@ -1,1 +1,4 @@
-%h2 POSTS#INDEX
+- @posts.each do |post|
+  %h2= link_to post.title, post
+
+= link_to "Add New Inspiration", new_post_path
