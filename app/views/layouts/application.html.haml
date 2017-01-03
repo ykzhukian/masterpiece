@@ -7,6 +7,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = yield
-
-  %p.notice= notice
-  %p.alert= alert
+  - if user_signed_in?
+    %p
+      signed in as
+      = current_user.name
+    - flash.each do |key, value|
+      %div{:class => "alert alert-#{key}"}= value
+    = link_to 'Sign Out', destroy_user_session_path, :method => :delete
+  - else
+    = link_to 'Sign In', new_user_session_path
+    = link_to 'Sign Up', new_user_registration_path
