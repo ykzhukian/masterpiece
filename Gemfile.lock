@@ -50,6 +50,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     arel (7.1.4)
     aws-sdk (2.6.43)
       aws-sdk-resources (= 2.6.43)
@@ -208,6 +209,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable (~> 0.10.0)
   aws-sdk (~> 2.0)
   aws-sigv4 (~> 1.0)
   byebug
