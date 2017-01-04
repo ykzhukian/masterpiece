@@ -4,6 +4,14 @@
 %p= @post.description
 %p= @post.user.name
 
+#comment
+  %h2.comment_count= pluralize(@post.comments.count, "comment")
+  - @comments.each do |c|
+    .comment
+      %p.username= c.user.name
+      %p.content= c.content
+
+  = render 'comments/form', :post => @post, :comment => @comment
 
 
 = link_to "Edit", edit_post_path(@post)
