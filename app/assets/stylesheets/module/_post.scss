@@ -1,31 +1,46 @@
 .card {
   position: relative;
   // border: 3px yellow solid;
-  box-shadow: 1px 1px 5px $main-color;
+  box-shadow: 1px 1px 1px $main-color;
   overflow: hidden;
+
   .image {
     position: absolute;
-    // overflow: hidden;
 
     img {
         width: 100%;
-        border-radius: .3rem .3rem 0 0;
+        // border-radius: .3rem .3rem 0 0;
       }
   }
 
   .info {
     position: absolute;
     // border: 3px yellow solid;
-    text-align: center;
+    opacity: 0.8;
+    transition-duration: .2s;
 
     .info-title {
-      height: 30px;
+      height: 36px;
       background-color: #fefefe;
+      transition-duration: .2s;
     }
 
     .caption {
       background-color: #fefefe;
-      height: 40px;
+      height: 36px;
+      transition-duration: .2s;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      .info-title {
+        height: 40px;
+      }
+
+      .caption {
+        height: 40px;
+      }
     }
   }
 

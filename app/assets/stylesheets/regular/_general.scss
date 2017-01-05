@@ -3,14 +3,29 @@
 html {
   background-color: $bg-color;
   color: $hover-color;
+  padding: 0;
+  margin: 0;
+
 }
 
 body {
   font-family: $font-proximanova;
   font-weight: 100;
+  padding: 0;
+  margin: 0 auto;
+
+  line-height: 1.5;
+  box-sizing: border-box;
+  // Better text rendering
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
 }
 
-
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 .clearfix:before, .clearfix:after {
   content: " ";

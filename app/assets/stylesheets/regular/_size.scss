@@ -6,11 +6,15 @@
   margin-left: auto;
   margin-right: auto;
 
+  @media screen and (max-width: $tablet) {
+    padding: 0 1rem;
+  }
 }
 
 /* Max Width
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .max-w150px { max-width: 150px; }
+.max-w200px { max-width: 200px; }
 .max-w350px { max-width: 350px; }
 .max-w450px { max-width: 450px; }
 .max-w600px { max-width: 600px; }
@@ -20,6 +24,7 @@
 /* Min Width
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .min-w150px { min-width: 150px; }
+.min-w200px { min-width: 200px; }
 .min-w350px { min-width: 350px; }
 .min-w450px { min-width: 450px; }
 .min-w600px { min-width: 600px; }

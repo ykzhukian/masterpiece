@@ -10,17 +10,18 @@
       %div{:class => "alert alert-#{key}"}= value
     - if user_signed_in?
       .bar.flex.justify-between.items-center
-        %h4.ml4 MOMENTS
-        %h6.mr4
+        = link_to root_path do
+          %h4.ml4 MOMENTS
+        %h6.mr4.flex.justify-between.min-w200px
           %span.mr2
             Hello, 
             = current_user.name
           = link_to 'Sign Out', destroy_user_session_path, :method => :delete
     - else
       .bar.flex.justify-between.items-center
-        %h4.ml4 MOMENTS
-        %h6.mr4
+        = link_to root_path do
+          %h4.ml4 MOMENTS
+        %h6.mr4.flex.justify-between.min-w200px
           = link_to 'Sign In', new_user_session_path
           = link_to 'Sign Up', new_user_registration_path
-
     = yield

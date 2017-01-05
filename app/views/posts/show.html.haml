@@ -1,27 +1,32 @@
-= image_tag @post.image.url(:medium)
-%h1= @post.title
-%p= @post.link
-%p= @post.description
-%p= @post.user.name
-%p
-  = @post.get_upvotes.size
-  Likes
-%p
-  = @post.get_downvotes.size
-  Dislikes
-= link_to "Like", like_post_path(@post), method: :get
-= link_to "Dislike", dislike_post_path(@post), method: :get
+.container.max-w750px
+  .m-auto.w100.max-w750px.pt4
+    = image_tag @post.image.url(:medium), :class => 'w100'
+  %h5.pt2= @post.title
+  %p= @post.link
+  %p= @post.description
+  .line
+  .wrapper.flex.justify-between
+    %p
+      Posted By 
+      = @post.user.name
+    .likeable.flex.justify-between.w20.self-center
+      .sm-font-smaller
+        = @post.get_upvotes.size
+        = link_to like_post_path(@post), method: :get do
+          %i.fa.fa-thumbs-o-up{"aria-hidden" => "true"}
+      .sm-font-smaller
+        = @post.get_downvotes.size
+        = link_to dislike_post_path(@post), method: :get do
+          %i.fa.fa-thumbs-o-down{"aria-hidden" => "true"}
 
-#comment
-  %h2.comment_count= pluralize(@post.comments.count, "comment")
+  %h6.pt2.comment_count= pluralize(@post.comments.count, "comment")
   - @comments.each do |c|
     .comment
-      %p.username= c.user.name
-      %p.content= c.content
-
+      .comment-author
+        = c.user.name
+      .comment-content= c.content
   = render 'comments/form', :post => @post, :comment => @comment
 
-
-= link_to "Edit", edit_post_path(@post)
-= link_to "Destroy", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
-= link_to "Home", root_path
+  = link_to "Edit", edit_post_path(@post)
+  = link_to "Destroy", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
+  = link_to "Home", root_path
