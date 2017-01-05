@@ -1,0 +1,52 @@
+/* Container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Max Width
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.max-w150px { max-width: 150px; }
+.max-w350px { max-width: 350px; }
+.max-w450px { max-width: 450px; }
+.max-w600px { max-width: 600px; }
+.max-w750px { max-width: 750px; }
+.max-w900px { max-width: 900px; }
+
+/* Min Width
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.min-w150px { min-width: 150px; }
+.min-w350px { min-width: 350px; }
+.min-w450px { min-width: 450px; }
+.min-w600px { min-width: 600px; }
+.min-w750px { min-width: 750px; }
+.min-w900px { min-width: 900px; }
+
+/* Min Height
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.min-h100vh { min-height: 100vh; }
+
+/* Width
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.w100 { width: 100%; }
+.w75  { width: 75%; }
+.w50  { width: 50%; }
+.w49  { width: 49%; }
+.w45  { width: 45%; }
+.w32  { width: 32%; }
+.w25  { width: 25%; }
+.w20  { width: 20%; }
+.w15  { width: 15%; }
+.w10  { width: 10%; }
+
+.w33  { width: calc(33.33% - 10px); }
+
+/* Height
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.h200px { height: 200px; }
+
+.h100   { height: 100%; }

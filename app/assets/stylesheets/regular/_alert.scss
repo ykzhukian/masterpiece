@@ -1,0 +1,22 @@
+/* Flash Message
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.flash {
+  color: #fefefe;
+  padding: 1rem 2rem;
+  z-index: 2;
+
+  @media screen and (max-width: $tablet) {
+    padding: 1rem 1rem;
+  }
+}
+
+.alert-alert,
+.alert-error, {
+  @extend .flash;
+  background-color: #D13D3D;
+}
+
+.alert-success, .alert-notice {
+  @extend .flash;
+  background-color: #0d931f;
+}

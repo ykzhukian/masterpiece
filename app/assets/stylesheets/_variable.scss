@@ -1,0 +1,33 @@
+// ---------------- font family ----------------------
+$font-proximanova: "ProximaNova-light", helvetica, sans-serif;
+
+
+// ---------------- font size ------------------------
+$font-base:               1.6rem; // 16px
+$font-small:              $font-base * 0.875;   // 14px
+$font-smaller:            $font-base * 0.65;    // 12px
+$font-large:              $font-base * 1.5;     // 24px
+$font-larger:             $font-base * 2.25;    // 36px
+$font-title:              $font-base * 3.375;   // 54px
+
+// ---------------- line height ------------------------
+$line-height-base:        1.5;
+$line-height-small:       1.375;
+$line-height-smaller:     1.25;
+$line-height-smallest:    1.125;
+$line-height-large:       1.75;
+
+// ---------------- responsive size --------------------
+$tablet:                  768px;
+$desktop:                 1024px;
+
+// ---------------- colors -----------------------------
+$main-color:              #585858;
+$bg-color:                #fefefe;
+$light-color:             #f2f2f2;
+$hover-color:             #383838;
+
+/* Transition
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$text-transition:         color 0.2s ease-in-out 0s;
+$all-transition:          all 0.2s ease 0s;

@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  // border: 3px yellow solid;
+  box-shadow: 1px 1px 5px $main-color;
+  overflow: hidden;
+  .image {
+    position: absolute;
+    // overflow: hidden;
+
+    img {
+        width: 100%;
+        border-radius: .3rem .3rem 0 0;
+      }
+  }
+
+  .info {
+    position: absolute;
+    // border: 3px yellow solid;
+    text-align: center;
+
+    .info-title {
+      height: 30px;
+      background-color: #fefefe;
+    }
+
+    .caption {
+      background-color: #fefefe;
+      height: 40px;
+    }
+  }
+
+}

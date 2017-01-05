@@ -1,0 +1,22 @@
+/* General
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  background-color: $bg-color;
+  color: $hover-color;
+}
+
+body {
+  font-family: $font-proximanova;
+  font-weight: 100;
+}
+
+
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}

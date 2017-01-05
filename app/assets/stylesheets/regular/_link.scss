@@ -1,0 +1,34 @@
+/* Hyperlink
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $main-color;
+  text-decoration: none;
+
+  &:link,
+  &:hover,
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $hover-color;
+    outline: 0;
+  }
+}
+
+// external link
+a.external[href^="http"] {
+  padding-right: 12px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: image-url("anchor.svg") no-repeat;
+    background-size: contain;
+    margin-left: 3px;
+    margin-top: 6px;
+  }
+}
