@@ -1,5 +1,6 @@
-.container.flex.justify-center.pt2
-  = link_to "+ Add New Moments", new_post_path
+.container.flex.justify-center
+  .pt2
+    = link_to "+ Add New Moments", new_post_path
 .container.flex.flex-wrap.justify-around.content-center.max-w900px
   - @posts.each do |post|
     .wrapper.min-w300px.w25.m1.pt2

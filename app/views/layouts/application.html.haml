@@ -14,7 +14,7 @@
           .bar.flex.justify-between.items-center
             = link_to root_path do
               %h4 MOMENTS
-            %h6.flex.justify-between.min-w200px
+            .flex.justify-between.min-w200px
               %span.mr2
                 Hello, 
                 = current_user.name
@@ -25,7 +25,7 @@
           .bar.flex.justify-between.items-center
             = link_to root_path do
               %h4 MOMENTS
-            %h6.flex.justify-between.min-w150px
+            .flex.justify-between.min-w150px
               = link_to 'Sign In', new_user_session_path
               = link_to 'Sign Up', new_user_registration_path
     = yield
