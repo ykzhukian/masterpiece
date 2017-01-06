@@ -1,6 +1,8 @@
-.container.flex.flex-wrap.justify-around.content-center
+.container.flex.justify-center.pt2
+  = link_to "+ Add New Moments", new_post_path
+.container.flex.flex-wrap.justify-around.content-center.max-w900px
   - @posts.each do |post|
-    .wrapper.min-w350px.w25.m1.pt2
+    .wrapper.min-w300px.w25.m1.pt2
       .card.h200px.w100
         .image= link_to image_tag(post.image.url(:thumb))
         .info.flex.flex-column.h100.flex-wrap.w100.justify-between
@@ -9,7 +11,7 @@
               %p.self-center= post.title
           .caption.flex.justify-around
             .sm-font-smaller.self-center= pluralize(post.comments.count, "comment")
-            .likeable.flex.justify-between.w20.self-center
+            .flex.justify-between.w20.self-center
               .sm-font-smaller
                 = post.get_upvotes.size
                 = link_to like_post_path(post), method: :get do
@@ -19,4 +21,3 @@
                 = link_to dislike_post_path(post), method: :get do
                   %i.fa.fa-thumbs-o-down{"aria-hidden" => "true"}
 
-/= link_to "Add New Inspiration", new_post_path

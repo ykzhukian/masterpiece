@@ -1,3 +1,7 @@
-%h2 Edit
+.container.max-w750px
+  %h4.pt4 EDIT
 
-= render 'form', :post => @post
+  = render 'form', :post => @post
+
+  .pt4
+    = link_to "< BACK", :back

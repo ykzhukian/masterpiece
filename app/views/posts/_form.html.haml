@@ -8,9 +8,9 @@
         - post.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.input :image
-  = f.input :title
-  = f.input :link
+  = f.input :image, label: "Upload An Image"
+  = f.input :title, wrapper_html: { class: 'text-input' }
+  = f.input :link, wrapper_html: { class: 'text-input' }
   = f.input :description
 
   = f.button :submit

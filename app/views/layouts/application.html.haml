@@ -10,7 +10,7 @@
       %div{:class => "alert alert-#{key}"}= value
     - if user_signed_in?
       .bg-light
-        .container.max-w750px
+        .container.max-w900px
           .bar.flex.justify-between.items-center
             = link_to root_path do
               %h4 MOMENTS
@@ -21,7 +21,7 @@
               = link_to 'Sign Out', destroy_user_session_path, :method => :delete
     - else
       .bg-light
-        .container.max-w750px
+        .container.max-w900px
           .bar.flex.justify-between.items-center
             = link_to root_path do
               %h4 MOMENTS
