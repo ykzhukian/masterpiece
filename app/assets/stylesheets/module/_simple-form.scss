@@ -28,10 +28,10 @@
 
 
   * {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
-  .string input {
+  .string input, .email input, .password input {
     outline: none;
     width: 100%;
     padding: 3px;
@@ -50,5 +50,9 @@
       font-size: $font-xsmall;
       cursor: pointer;
     }
+  }
+
+  .boolean input {
+    margin-right: 10px;
   }
 }
