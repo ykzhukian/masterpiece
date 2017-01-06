@@ -4,9 +4,9 @@
     = link_to "+ Add New Moments", new_post_path
 .container.flex.flex-wrap.justify-around.content-center.max-w900px
   - @posts.each do |post|
-    .wrapper.min-w300px.w25.m1.pt2
+    .wrapper.w45.m1.pt2.tablet-w65.mobile-w100
       .card.h200px.w100
-        .image= link_to image_tag(post.image.url(:thumb))
+        .image= image_tag post.image.url(:medium), class: "w100"
         .info.flex.flex-column.h100.flex-wrap.w100.justify-between
           = link_to post do
             .info-title.flex.justify-center

@@ -51,6 +51,18 @@
 
 .w33  { width: calc(33.33% - 10px); }
 
+@media screen and (max-width: $tablet) {
+  .tablet-w65 {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .mobile-w100 {
+    width: 100%;
+  }
+}
+
 /* Height
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .h200px { height: 200px; }
