@@ -1,5 +1,5 @@
 .container.max-w750px
-  .m-auto.w100.max-w750px.pt4
+  .m-auto.w100.max-w750px.pt2
     = image_tag @post.image.url(:medium), :class => 'w100'
   %h5.pt2= @post.title
   %p= @post.link
@@ -9,7 +9,11 @@
     %p
       Posted By 
       = @post.user.name
-    .likeable.flex.justify-between.w20.self-center
+    .likeable.flex.justify-between.self-center
+      .font-smaller
+        = link_to "EDIT", edit_post_path(@post)
+        |
+        = link_to "DESTROY", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
       .sm-font-smaller
         = @post.get_upvotes.size
         = link_to like_post_path(@post), method: :get do
@@ -21,12 +25,11 @@
 
   %h6.pt2.comment_count= pluralize(@post.comments.count, "comment")
   - @comments.each do |c|
-    .comment
-      .comment-author
-        = c.user.name
-      .comment-content= c.content
-  = render 'comments/form', :post => @post, :comment => @comment
-
-  = link_to "Edit", edit_post_path(@post)
-  = link_to "Destroy", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
-  = link_to "Home", root_path
+    .comment.pt2
+      .p2.flex.justify-between
+        %span= c.user.name
+        %span.font-xsmall= c.created_at.strftime("%I %p %d %B %A")
+      .comment-content.p2= c.content
+  
+  .pt4
+    = render 'comments/form', :post => @post, :comment => @comment

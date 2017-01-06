@@ -45,3 +45,12 @@
   }
 
 }
+
+.likeable{
+  width: 32%;
+
+  @media screen and (max-width: $tablet) {
+    width: 55%;
+    font-size: 10px;
+  }
+}
